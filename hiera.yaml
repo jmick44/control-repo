@@ -1,0 +1,22 @@
+---
+# Hiera 5 Global configuration file
+
+version: 5
+
+# defaults:
+#   data_hash: yaml_data
+# hierarchy:
+#  - name: Common
+#    data_hash: yaml_data
+
+defaults:  # Used for any hierarchy level that omits these keys.
+  datadir: data         # This path is relative to hiera.yaml's directory.
+  data_hash: yaml_data  # Use the built-in YAML backend.
+
+hierarchy:
+ - name: Classifier Configuration Data
+   data_hash: classifier_data
+ - name: Common
+   data_hash: yaml_data
+   path: common.yaml
+
