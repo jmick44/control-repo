@@ -1,16 +1,16 @@
 ---
 puppet_enterprise::master::code_manager::git_settings:
   repositories:
-     - remote: "git@github.com:jmick44/control-repo-2.git"
+     - remote: "git@github.com:jmick44/control-repo.git"
        private-key: "/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa"
      - remote: "git@github.com:jmick44/control-repo-2.git"
        private-key: "/etc/puppetlabs/puppetserver/ssh/id_rsa_2"
 
 puppet_enterprise::master::code_manager::sources:
   one: 
-     remote: "git://github.com/jmick44/control-repo"
+     remote: "git@github.com:jmick44/control-repo.git"
      prefix: "one"
-  two: 
-     remote: "git://github.com/jmick44/control-repo-2"
+  two:
+     remote: "git@github.com:jmick44/control-repo-2.git" 
      prefix: "two"
 
