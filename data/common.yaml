@@ -8,7 +8,7 @@ puppet_enterprise::master::code_manager::git_settings::repositories:
 puppet_enterprise::master::code_manager::sources:
   one: 
      remote: "git@github.com:jmick44/control-repo.git"
-     prefix: "one"
+     prefix: false
   two:
      remote: "git@github.com:jmick44/control-repo-2.git" 
      prefix: "two"
